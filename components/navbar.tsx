@@ -3,6 +3,7 @@ import Link from "next/link";
 import MainNav from "./main-nav";
 import getCategories from "@/actions/get-categories";
 import NavbarActions from "./navbar-actions";
+import { ThemeToggle } from "./theme-toggle";
 
 export const revalidate = 0;
 //never cached, otherwise must hard refresh using cmd+shift+r
@@ -17,6 +18,7 @@ const Navbar = async() => {
           <Link href="/" className="ml-4 flex lg:ml-0 gap-x-2">
             <p className="font-bold text-xl">Solar Streetwear </p>
           </Link>
+          <ThemeToggle/>
           <MainNav data={categories}/>
           <NavbarActions/>
         </div>
